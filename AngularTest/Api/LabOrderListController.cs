@@ -3,37 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
+using AngularTest.Models;
+using AngularTest.Services;
 
 namespace AngularTest.Api
 {
     public class LabOrderListController : ApiController
     {
+       
         // GET: api/LabOrderList
-        public IEnumerable<string> Get()
+        public async Task<List<LabOrderListViewModel>> Get()
         {
-            return new string[] { "value1", "value2" };
+            var service = new LabOrderService();
+            //TODO:Complete service implementation
+            var result = await service.GetLabOrderList();
+            return result;
         }
 
-        // GET: api/LabOrderList/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST: api/LabOrderList
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT: api/LabOrderList/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE: api/LabOrderList/5
-        public void Delete(int id)
-        {
-        }
     }
 }
