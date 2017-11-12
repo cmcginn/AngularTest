@@ -260,6 +260,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\config.js" />
+    <Content Include="Scripts\app\controllers\main-controller.js" />
+    <Content Include="Scripts\app\views\main.html" />
     <Content Include="Scripts\vendor\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\vendor\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\vendor\bootstrap.js" />
@@ -318,7 +321,10 @@
     <Content Include="Scripts\vendor\version.json" />
     <Content Include="Views\App\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Scripts\app\directives\" />
+    <Folder Include="Scripts\app\services\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

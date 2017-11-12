@@ -9,31 +9,32 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body ng-app="myApp">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
-                </ul>
-            </div>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+                <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
+            </ul>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+</div>
+    
+<div layout="row" flex layout-fill>
+    <div flex class="container">
+        <div flex layout-fill>
+            @RenderBody()
+        </div>
     </div>
+</div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
@@ -45,12 +46,10 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-aria.js"></script>   
 
-@*
-*@
-   
 
-
-    <script src="~/Scripts/app/app.js"></script>
+<script src="~/Scripts/app/app.js"></script>
+<script src="~/Scripts/app/config.js"></script>
+<script src="~/Scripts/app/controllers/main-controller.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
