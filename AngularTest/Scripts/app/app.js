@@ -1,10 +1,33 @@
-﻿'use strict';
+﻿//(function (ng) {
 
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
-        
-]).config([function ($locationProvider) {
-        $locationProvider.hashPrefix('!');
+//    'use strict';
 
-       // $routeProvider.otherwise({ redirectTo: '/view1' });
-}]);
+
+
+//    angular
+//        .module('myApp',
+//            [
+//                'ui.router',
+//                'ngMaterial',
+//                'ngAnimate',
+//                'ngAria'
+//            ]);
+//    /*
+//    console.log('remindMd dependancies injected');
+//    */
+//})();
+
+'use strict';
+angular.module('myApp',
+    [
+     'ui.router',
+    'ngMaterial',
+    'ngAnimate',
+    'ngAria'
+    ]).config([
+    '$stateProvider', '$urlRouterProvider',
+    function($stateProvider, $urlRouterProvider) {
+
+
+    }
+]);
