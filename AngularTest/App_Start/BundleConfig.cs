@@ -26,8 +26,8 @@ namespace AngularTest
             //bundles.Add(new ScriptBundle("~/bundles/angular").Include("~/Scripts/vendor/angular.js",
             //    "~/Scripts/vendor/angular-*"));
 
-            //bundles.Add(new ScriptBundle("~/bundles/app")
-            //    .IncludeDirectory("~/Scripts/app", "*.js", true));
+            bundles.Add(new ScriptBundle("~/bundles/app")
+                .IncludeDirectory("~/Scripts/app", "*.js", true));
         }
     }
 }

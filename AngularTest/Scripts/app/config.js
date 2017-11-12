@@ -1,6 +1,8 @@
 ﻿angular.module('myApp').config([
-    '$stateProvider', '$mdIconProvider', '$urlRouterProvider', '$mdThemingProvider',
-    function ($stateProvider, $mdIconProvider, $urlRouterProvider, $mdThemingProvider) {
+    '$stateProvider','$locationProvider', '$mdIconProvider', '$urlRouterProvider', '$mdThemingProvider',
+    function ($stateProvider, $locationProvider, $mdIconProvider, $urlRouterProvider, $mdThemingProvider) {
+
+        $locationProvider.hashPrefix('');
         // theme
         $mdThemingProvider.theme('default')
             .primaryPalette('blue')
